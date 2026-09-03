@@ -64,6 +64,16 @@ body {
     font-size: 24px;
     font-weight: 700;
 }
+.logo small {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--dark);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
 
 
 .logo span,

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Know Your Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Know Your <span>Fashion</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#how">How It Works</a>
+            <button onclick="openModal()">Share Outfit</button>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="small-heading">YOUR STYLE. YOUR CHOICE.</p>
+
+            <h1>
+                Wear it.<br>
+                Share it.<br>
+                <span>Know your fashion.</span>
+            </h1>
+
+            <p class="hero-description">
+                Not sure what to wear?
+                Share your outfit, discover new styles,
+                and get suggestions from a fashion-loving community.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="openModal()">
+                    Share Your Outfit
+                </button>
+
+                <a href="#explore" class="secondary-btn">
+                    Explore Styles
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="fashion-circle">
+                ✦
+            </div>
+
+            <h3>What are you wearing?</h3>
+
+            <p>
+                Outfit inspiration is everywhere.
+                Find yours here.
+            </p>
+
+            <div class="mini-tags">
+                <span>Casual</span>
+                <span>Streetwear</span>
+                <span>Formal</span>
+                <span>Traditional</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXPLORE SECTION -->
+
+    <section class="explore-section" id="explore">
+
+        <div class="section-heading">
+
+            <p class="small-heading">COMMUNITY STYLE</p>
+
+            <h2>See what everyone is wearing</h2>
+
+            <p>
+                Get inspired, share your thoughts,
+                and help someone decide what to wear.
+            </p>
+
+        </div>
+
+
+        <div class="outfit-grid">
+
+            <!-- CARD 1 -->
+
+            <article class="outfit-card">
+
+                <div class="outfit-image image-one">
+                    👕
+                </div>
+
+                <div class="card-content">
+
+                    <div class="user-info">
+                        <div class="avatar">A</div>
+
+                        <div>
+                            <strong>Alex</strong>
+                            <small>Casual Day</small>
+                        </div>
+                    </div>
+
+                    <p>
+                        Keeping it simple today.
+                        What do you think?
+                    </p>
+
+                    <div class="card-actions">
+
+                        <button onclick="likePost(this)">
+                            ♡ <span>12</span>
+                        </button>
+
+                        <button onclick="commentPost()">
+                            💬 Comment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CARD 2 -->
+
+            <article class="outfit-card">
+
+                <div class="outfit-image image-two">
+                    🧥
+                </div>
+
+                <div class="card-content">
+
+                    <div class="user-info">
+
+                        <div class="avatar">R</div>
+
+                        <div>
+                            <strong>Riya</strong>
+                            <small>Streetwear</small>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Tried layering for the first time.
+                        Does it work?
+                    </p>
+
+                    <div class="card-actions">
+
+                        <button onclick="likePost(this)">
+                            ♡ <span>24</span>
+                        </button>
+
+                        <button onclick="commentPost()">
+                            💬 Comment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CARD 3 -->
+
+            <article class="outfit-card">
+
+                <div class="outfit-image image-three">
+                    👔
+                </div>
+
+                <div class="card-content">
+
+                    <div class="user-info">
+
+                        <div class="avatar">S</div>
+
+                        <div>
+                            <strong>Sam</strong>
+                            <small>Formal</small>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        First day at my new internship.
+                        Any suggestions?
+                    </p>
+
+                    <div class="card-actions">
+
+                        <button onclick="likePost(this)">
+                            ♡ <span>18</span>
+                        </button>
+
+                        <button onclick="commentPost()">
+                            💬 Comment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-section" id="how">
+
+        <div class="section-heading">
+
+            <p class="small-heading">HOW IT WORKS</p>
+
+            <h2>Fashion is better together.</h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <h3>Share</h3>
+
+                <p>
+                    Upload an outfit you're thinking
+                    of wearing.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <h3>Ask</h3>
+
+                <p>
+                    Ask the community what they
+                    think about your look.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <h3>Discover</h3>
+
+                <p>
+                    Get suggestions and discover
+                    new ways to style yourself.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            Have an outfit in mind?
+        </h2>
+
+        <p>
+            Don't overthink it. Share it.
+        </p>
+
+        <button class="primary-btn" onclick="openModal()">
+            Post Your Outfit
+        </button>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Know Your <span>Fashion</span>
+        </div>
+
+        <p>
+            A community for people who love fashion.
+        </p>
+
+        <p class="copyright">
+            © 2026 Know Your Fashion
+        </p>
+
+    </footer>
+
+
+
+    <!-- SHARE OUTFIT MODAL -->
+
+    <div class="modal" id="outfitModal">
+
+        <div class="modal-box">
+
+            <button class="close-btn" onclick="closeModal()">
+                ×
+            </button>
+
+            <h2>Share Your Outfit</h2>
+
+            <p>
+                Show us what you're thinking of wearing.
+            </p>
+
+
+            <form id="outfitForm">
+
+                <label>Your name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="e.g. Alex"
+                    required
+                >
+
+
+                <label>Occasion</label>
+
+                <select id="occasion" required>
+
+                    <option value="">
+                        Select an occasion
+                    </option>
+
+                    <option>Casual</option>
+                    <option>College</option>
+                    <option>Work</option>
+                    <option>Date</option>
+                    <option>Party</option>
+                    <option>Traditional</option>
+                    <option>Travel</option>
+                    <option>Other</option>
+
+                </select>
+
+
+                <label>Tell us about your outfit</label>
+
+                <textarea
+                    id="caption"
+                    placeholder="What do you think about your look?"
+                    required
+                ></textarea>
+
+
+                <label>Upload outfit picture</label>
+
+                <input
+                    type="file"
+                    id="outfitImage"
+                    accept="image/*"
+                >
+
+
+                <img
+                    id="imagePreview"
+                    class="image-preview"
+                    alt="Image preview"
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary-btn submit-btn"
+                >
+                    Post Outfit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

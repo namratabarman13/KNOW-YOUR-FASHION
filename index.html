@@ -20,16 +20,26 @@
     <header class="navbar">
 
         <div class="logo">
-            Know Your <span>Fashion</span>
-        </div>
+            <div>Know Your <span>Fashion</span></div>
         <small> by NAMRATA BARMAN </small>
     </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#explore">Explore</a>
-            <a href="#how">How It Works</a>
-            <button onclick="openModal()">Share Outfit</button>
-        </nav>
+       <nav>
+    <a href="#home">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#how">How It Works</a>
+
+    <button onclick="openModal()">
+        Share Outfit
+    </button>
+
+    <button
+        class="signin-btn"
+        onclick="openAuthModal()"
+        id="authButton"
+    >
+        Sign In
+    </button>
+</nav>
 
     </header>
 
@@ -145,7 +155,7 @@
                             ♡ <span>12</span>
                         </button>
 
-                        <button onclick="commentPost()">
+                        <button onclick="commentPost(this)">
                             💬 Comment
                         </button>
 
@@ -348,99 +358,131 @@
         </p>
 
     </footer>
+<!-- ==========================================
+     SIGN IN / SIGN UP MODAL
+     ========================================== -->
+
+<div class="modal" id="authModal">
+
+    <div class="modal-box auth-box">
+
+        <button
+            class="close-btn"
+            onclick="closeAuthModal()"
+        >
+            ×
+        </button>
+
+        <h2 id="authTitle">
+            Welcome Back
+        </h2>
+
+        <p id="authSubtitle">
+            Sign in to share outfits and join the community.
+        </p>
 
 
+        <!-- SIGN IN FORM -->
 
-    <!-- SHARE OUTFIT MODAL -->
+        <form id="loginForm">
 
-    <div class="modal" id="outfitModal">
+            <label>Email</label>
 
-        <div class="modal-box">
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="you@example.com"
+                required
+            >
 
-            <button class="close-btn" onclick="closeModal()">
-                ×
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="primary-btn auth-submit"
+            >
+                Sign In
             </button>
 
-            <h2>Share Your Outfit</h2>
-
-            <p>
-                Show us what you're thinking of wearing.
-            </p>
+        </form>
 
 
-            <form id="outfitForm">
+        <!-- SIGN UP FORM -->
 
-                <label>Your name</label>
+        <form
+            id="signupForm"
+            style="display: none;"
+        >
 
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="e.g. Alex"
-                    required
-                >
+            <label>Your Name</label>
 
-
-                <label>Occasion</label>
-
-                <select id="occasion" required>
-
-                    <option value="">
-                        Select an occasion
-                    </option>
-
-                    <option>Casual</option>
-                    <option>College</option>
-                    <option>Work</option>
-                    <option>Date</option>
-                    <option>Party</option>
-                    <option>Traditional</option>
-                    <option>Travel</option>
-                    <option>Other</option>
-
-                </select>
+            <input
+                type="text"
+                id="signupName"
+                placeholder="e.g. Namrata"
+                required
+            >
 
 
-                <label>Tell us about your outfit</label>
+            <label>Email</label>
 
-                <textarea
-                    id="caption"
-                    placeholder="What do you think about your look?"
-                    required
-                ></textarea>
-
-
-                <label>Upload outfit picture</label>
-
-                <input
-                    type="file"
-                    id="outfitImage"
-                    accept="image/*"
-                >
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="you@example.com"
+                required
+            >
 
 
-                <img
-                    id="imagePreview"
-                    class="image-preview"
-                    alt="Image preview"
-                >
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                minlength="6"
+                required
+            >
 
 
-                <button
-                    type="submit"
-                    class="primary-btn submit-btn"
-                >
-                    Post Outfit
-                </button>
+            <button
+                type="submit"
+                class="primary-btn auth-submit"
+            >
+                Create Account
+            </button>
 
-            </form>
+        </form>
+
+
+        <div class="auth-switch">
+
+            <span id="authSwitchText">
+                Don't have an account?
+            </span>
+
+            <button
+                type="button"
+                onclick="toggleAuthMode()"
+                id="authSwitchButton"
+            >
+                Sign Up
+            </button>
 
         </div>
 
     </div>
 
-
-
-    <script src="script.js"></script>
+</div>
 
 </body>
 

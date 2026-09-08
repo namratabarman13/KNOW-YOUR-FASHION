@@ -883,3 +883,165 @@ textarea {
     }
 
 }
+/* ==========================================
+   COMMUNITY COMMENTS
+   ========================================== */
+
+.comments-section {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fffaf0;
+    border-radius: 15px;
+    border-top: 1px solid #fce7f3;
+}
+
+.comment-input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #f3b4d2;
+    border-radius: 20px;
+    outline: none;
+    font-family: inherit;
+}
+
+.comment-submit {
+    border: none;
+    background: #ec4899;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comments-list {
+    margin-top: 12px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid #fce7f3;
+}
+
+.comment-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fce7f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #be185d;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-content strong {
+    font-size: 13px;
+    color: #351525;
+}
+
+.comment-content p {
+    margin: 3px 0 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.delete-comment {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-post {
+    color: #be185d !important;
+}
+
+/* ==========================================
+   SIGN IN / SIGN UP
+   ========================================== */
+
+.signin-btn {
+    background: transparent;
+    border: 1.5px solid #ec4899;
+    color: #be185d;
+    padding: 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.signin-btn:hover {
+    background: #fce7f3;
+}
+
+.auth-box {
+    max-width: 430px !important;
+}
+
+.auth-box h2 {
+    margin-bottom: 8px;
+}
+
+.auth-box > p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.auth-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-switch button {
+    border: none;
+    background: none;
+    color: #be185d;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    margin-left: 5px;
+}
+
+.auth-switch button:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    .signin-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .auth-box {
+        width: calc(100% - 30px) !important;
+        max-width: 430px !important;
+        box-sizing: border-box;
+    }
+
+}

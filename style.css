@@ -797,70 +797,89 @@ textarea {
 
 
 
-/* ===== MOBILE PHONE VIEW ===== */
+/* ===== MOBILE VIEW ===== */
 
 @media (max-width: 600px) {
 
     .navbar {
-        padding: 14px 20px;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 15px;
         gap: 12px;
     }
 
     .logo {
-        font-size: 20px;
-        line-height: 1.1;
+        text-align: center;
+        font-size: 22px;
+        line-height: 1.05;
+        width: 100%;
     }
 
     .logo small {
+        display: block;
+        font-family: "DM Sans", sans-serif;
         font-size: 9px;
-        margin-top: 3px;
+        font-weight: 500;
+        font-style: italic;
+        color: var(--dark);
+        margin-top: 5px;
+        letter-spacing: 0.4px;
     }
 
     .navbar nav {
-        width: 100%;
         display: flex;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 12px;
-        padding-top: 4px;
+        gap: 8px;
+        width: 100%;
     }
 
     .navbar nav a {
         font-size: 12px;
+        white-space: nowrap;
     }
 
     .navbar nav button {
         font-size: 12px;
-        padding: 8px 13px;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+}
+
+/* ===== MOBILE HERO CARD ===== */
+
+
+    .fashion-circle {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 25px;
     }
 
-    .hero {
-        padding: 60px 20px 50px;
-        text-align: center;
+    .hero-card h2 {
+        font-size: 34px;
+        line-height: 1.15;
     }
 
-    .hero h1 {
-        font-size: 48px;
-        line-height: 1.02;
+    .hero-card p {
+        font-size: 16px;
+        line-height: 1.5;
     }
 
-    .hero p {
-        font-size: 17px;
-        line-height: 1.6;
-    }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
+@media screen and (max-width: 600px) {
 
-    .hero-buttons button,
-    .hero-buttons a {
-        width: 100%;
-        max-width: 300px;
+    .hero-card {
+        transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        width: calc(100% - 30px) !important;
+        max-width: 370px !important;
+        margin: 25px auto !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
     }
 
 }
-
